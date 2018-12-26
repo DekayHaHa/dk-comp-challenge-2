@@ -1,0 +1,121 @@
+*{
+/*  border: 1px solid blue;*/
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "navbar header"
+    "navbar summary"
+    "navbar summary"
+}
+
+nav {
+  background-color: #354051;
+  color: #fff;
+  grid-area: navbar;
+  border: 1px solid red;
+  display: grid;
+}
+
+.user-pic {
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: 2px solid;
+}
+
+.user-name:after {
+  background-image: url('images/chevron-down-solid.svg');
+}
+
+.user-name {
+  margin-top: 10px;
+}
+
+ul {
+  padding-left: 0px;
+}
+li {
+  list-style: none;
+}
+
+nav li:before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-image: url('images/home-solid.svg');*/
+}
+
+.home:before {
+  background-image: url('images/home-solid.svg');
+}
+
+.jobs:before {
+  background-image: url('images/briefcase-solid.svg');
+}
+
+.resumes:before {
+  background-image: url('images/file-contract-solid.svg');
+}
+
+.tasks:before {
+  background-image: url('images/clipboard-list-solid.svg');
+}
+
+.calendar:before {
+  background-image: url('images/calendar-alt-solid.svg');
+}
+
+.user:before {
+  background-image: url('images/user-friends-solid.svg');
+}
+
+.location:before {
+  background-image: url('images/map-marker-alt-solid.svg');
+}
+
+.workflows:before {
+  background-image: url('images/network-wired-solid.svg');
+}
+
+.job-boards:before {
+  background-image: url('images/paste-solid.svg');
+}
+
+.social:before {
+  background-image: url('images/user-plus-solid.svg');
+}
+
+
+
+.categories input {
+  margin-right: 5px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.profile-pic {
+  border-radius: 100% 100%;
+}
+
+header {
+  display: grid;
+
+  grid-area: header;
+  border: 1px solid purple;
+}
+
+.summary {
+  background-color: #EDF2F6;
+  grid-area: summary;
+  border: 1px solid green;
+}
