@@ -14,42 +14,59 @@
 
 nav {
   background-color: #354051;
-  color: #fff;
+  color: #ABB6C8;
   grid-area: navbar;
-  border: 1px solid red;
   display: grid;
+  font-size: 10px;
 }
 
 .user-pic {
   text-align: center;
   margin-top: 30px;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #2D384B;
 }
 
 .user-name:after {
   background-image: url('images/chevron-down-solid.svg');
 }
 
+nav h4 {
+  color: #536073;
+  margin: 20px auto auto 15px;
+}
+
 .user-name {
-  margin-top: 10px;
+  color: #ABB6C8;
+  margin: 10px auto 30px;
 }
 
 ul {
   padding-left: 0px;
 }
+
 li {
   list-style: none;
+  color: #ABB6C8;
+  padding: 10px 0px 10px 15px;
+}
+
+.admin li:hover, .main li:hover {
+  background-color: #2D384B;
+  border-left: 2px solid #14ACF7;
+}
+
+.main {
+  border-bottom: 2px solid #2D384B;
 }
 
 nav li:before {
   content: '';
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
   height: 15px;
   width: 15px;
   background-position: center;
   background-repeat: no-repeat;
-  /*background-image: url('images/home-solid.svg');*/
 }
 
 .home:before {
@@ -92,10 +109,20 @@ nav li:before {
   background-image: url('images/user-plus-solid.svg');
 }
 
+.admin {
+  border-bottom: 2px solid #2D384B;
+}
 
+nav section.categories li:before {
+  margin-right: 0px;
+}
 
-.categories input {
-  margin-right: 5px;
+nav section input {
+  margin-left: -15px;
+}
+
+nav section label {
+  margin-left: 15px;
 }
 
 a {
@@ -109,7 +136,6 @@ a {
 
 header {
   display: grid;
-
   grid-area: header;
   border: 1px solid purple;
 }
