@@ -36,52 +36,92 @@
       <section class="categories">
         <h4>Categories</h4>
         <ul>
-          <li><input id="admins" type="checkbox" name=""><label for="admins">Administrative</label></li>
-          <li><input id="design" type="checkbox" name=""><label for="design">Design</label></li>
-          <li><input id="exec" type="checkbox" name=""><label for="exec">Executive</label></li>
-          <li><input id="hr" type="checkbox" name=""><label for="hr">Human Resources</label></li>
+          <li><span class="checkmark yellow"></span><input id="admins" type="checkbox"><label for="admins">Administrative</label></li>
+          <li><span class="checkmark blue"></span><input id="design" type="checkbox"><label for="design">Design</label></li>
+          <li><span class="checkmark red"></span><input id="exec" type="checkbox"><label for="exec">Executive</label></li>
+          <li><span class="checkmark green"></span><input id="hr" type="checkbox"><label for="hr">Human Resources</label></li>
         </ul>         
       </section>
     </nav>
     <header>
-      <article class="quick-search">
-        <section class="nav-button">
-          <i class="nav-toggle"></i>
+        <section class="nav-button icon">
         </section>
         <section class="search-field">
-          <input type="input" name="site-search" value="search for a job, task or resume"></ins>
+          <input type="text" name="site-search" value="search for a job, task or resume"></ins>
         </section>
-        <section class="add-button">
-          <i class="add-user"></i>
+        <section class="add-button icon">
         </section>
-        <section class="calendar">
-          <i class="add-event"></i>
+        <section class="video icon">
         </section>
-        <section class="page-display">
-          <i class="page-layout"></i>
+        <section class="page-display icon">
         </section>
-      </article>
-      <h2>Customer Service Representative</h2>
-      <h5>San Francisco, CA <span>Preview this post</span></h5>
-      <ul>
-        <li>SUMMARY</li>
-        <li>APPLICANTS</li>
-        <li>JOB BOARD</li>
-        <li>INTERVIEWS</li>
-        <li>ACTIVITY</li>
-        <li>BROADCAST</li>
-        <li>NOTIFICATIONS</li>
-      </ul>
+      <section class="title-container">
+      <h2 class="tile">Customer Service Representative</h2>
+      <h5 class="sub title"><i class="fas fa-map-marker-alt"></i> San Francisco, CA ·<span> Preview this post</span></h5>
+      </section>
+      <div class="button-corral">
+        <button class="button open">OPEN</button>
+        <button class="button banner"></button>
+        <button class="button write"></button>
+        <button class="button light"></button>
+      </div>
+      <div class="nav-line">
+        <p>SUMMARY</p>
+        <p>APPLICANTS</p>
+        <p>JOB BOARD</p>
+        <p>INTERVIEWS</p>
+        <p>ACTIVITY</p>
+        <p>BROADCAST</p>
+        <p>NOTIFICATIONS</p>
+        </div>
     </header>
     <article class="summary">
       <section class="data-display">
-
+        <h1>DATA</h1>
       </section>
       <section class="job-description">
-        
+          <div class="table-head">
+            <h6>JOB DESCRIPTION <button class="edit"></button></h6>
+          </div>
+        <div class="table">
+              <h6>POSITION TITLE</h6>
+              <p>Customer Service Representative</p>
+              <h6>LOCATION</h6>
+              <p>San Francisco, CA</p>
+              <h6>EMPLOYMENT TYPE</h6>
+              <p>Full-time</p>
+              <h6>EXPERIECE</h6>
+              <p>Mid-level</p>
+              <h6>STATUS</h6>
+              <p>Open</p>
+              <h6>DESCRIPTION</h6>
+              <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nod exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h6>HIRING LEAD</h6>
+              <p class="hiring-img"><img class="hiring-person" src="static-comp-image.jpg"> Devin kapla</p>
+              <h6 class="last">APPROVED SALARY</h6>
+              <p class="last">$100,000</p>
+        </div>
       </section>
       <footer>
-
+        <div class="social-buttons">
+        <button class="facebook"><i class="fab fa-facebook-f"></i> Post to Facebook</button>
+        <button class="tweet"><i class="fab fa-twitter"></i> Tweet this Job</button>
+        <button class="linkedin"><i class="fab fa-linkedin"></i> Post to Linkedin</button>
+        </div>
+        <h4 class="job-link"><i class="fas fa-globe-americas"></i> Link to this Job</h4>
+        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
+        <button class="copy"><input class="input-copy" type="text" name="">Copy</button>
+        <h4><i class="fas fa-camera-retro"></i> Use the Button Widget</h4>
+        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
+        <button class="copy"><input class="input-copy" type="text" name="">Copy</button>
+        <h4><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h4>
+        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
+        <input type="" name="" value="devinkapla@gmail.com">
       </footer>
     </article>
   </section>
