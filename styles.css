@@ -1,9 +1,12 @@
-
+body{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #7d828e;
+}
 
 
 .page-container {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 170px; auto;
   grid-template-rows: auto;
   grid-template-areas:
     "navbar header"
@@ -15,9 +18,9 @@ nav {
   background-color: #354051;
   color: #ABB6C8;
   grid-area: navbar;
-  display: grid;
-  grid-template-rows: auto;
-  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: .75em;
 }
 
 .user-pic {
@@ -139,35 +142,38 @@ a {
 }
 
 header {
+  position: relative;
   grid-area: header;
   display: grid;
   grid-template-columns: .5fr 4fr .5fr .5fr .5fr;
   grid-template-rows: .50fr 1fr .40fr;
   grid-template-areas:
     "hamburger search social video nine"
-    "title title buttons buttons buttons"
+    "title title title title title"
     "nav-list nav-list nav-list nav-list nav-list";
+}
+
+
+.fas.fa-caret-left {
+  color: limegreen;
+  font-size: .80em;
 }
 
 .icon:hover {
   background-color: #13A4FA;
+  color: white;
 }
 
 .icon {
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-position: center;
+  display: flex;
+  justify-content: space-around;
   border-right: 2px solid lightgrey;
-  background-size: 45% 45%;
+  align-items: center;
+  font-size: 2.5em;
 }
 
 .nav-button {
   grid-area: hamburger;
-  background-image: url('images/caret-left-solid.svg'), 
-                    url('images/bars-solid.svg');
-  background-position: left, center;
-  background-size: 30% 30%, 50% 50%;
 }
 
 .search-field {
@@ -179,6 +185,7 @@ header input {
   height: 100%;
   border: none;
   margin-left: 10px
+  border-bottom: 2px solid lightgrey;
 }
 
 header input[type='text'] {
@@ -192,19 +199,15 @@ header input[type='text'] {
 
 .add-button {
   grid-area: social;
-  background-image: url('images/user-plus-solid.svg');
   border-left: 2px solid lightgrey;
 }
 
 .video {
   grid-area: video;
-  background-image: url('images/calendar-plus-solid.svg');
-
 }
 
 .page-display {
   grid-area: nine;
-  background-image: url('images/th-solid.svg');
 }
 
 .title-container {
@@ -212,6 +215,18 @@ header input[type='text'] {
   padding-left: 5%; 
   border-top: 2px solid lightgrey;
   grid-area: title;
+}
+
+
+
+.fas.fa-circle {
+  font-size: .50em;
+  vertical-align: 2.5px;
+}
+
+.button-corral .fas.fa-circle {
+  color: limegreen;
+  
 }
 
 header h2 {
@@ -223,17 +238,29 @@ h5 span {
 }
 
 .button-corral {
-  padding-top: 15%;
-  border-top: 2px solid lightgrey;
+  width: 300px;
+  position: absolute;
   grid-area: buttons;
+  right: 50px;
+  top: 175px;
+}
+
+
+.button {
+  margin-right: 5%;
+  border-radius: 100% 100%;
+  padding: 10px;
+  border: 2px solid lightgrey;
+  color: #989CA6;
 }
 
 .button.open {
   margin-left: -10%;
+  border-radius: 50px 50px;
 }
 
-.button {
-  margin-right: 5%;
+.button.bookmark {
+  padding: 10px 12px;
 }
 
 .nav-line {
@@ -243,7 +270,7 @@ h5 span {
 }
 
 .nav-line p {
-  font-size: .65em;
+  font-size: .80em;
   margin-left: 3.5%;
   margin-bottom: 0%;
   padding-bottom: 10px;
@@ -259,7 +286,11 @@ header p {
   border-bottom: 2px solid transparent;
 }
 
+
 .summary {
+  grid-column-gap: 3%;
+  grid-row-gap: 6%;
+  padding: 3% 6% 6% 3%;
   background-color: #EDF2F6;
   grid-area: summary;
   display: grid;
@@ -272,31 +303,174 @@ header p {
 
 .data-display {
   grid-area: data;
+  display: grid;
+  grid-template-areas:
+    "circle-graph bar-graph"
+    "circle-data bar-data"
+    "line-arrow line-arrow"
 }
 
-.job-description {
-  grid-area: summary;
-}
 
 .social {
   grid-area: social;
 }
+.graph-container {
+  grid-area: circle-graph;
+  display: flex;
+  justify-content: space-between;
+  /*flex-wrap: wrap;*/
+}
 
-.table-head {
+.circle-graph {
+  animation: circle-chart-fill 2s reverse;
+  transform:  rotate(90deg);
+  transform-origin: center;
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+.circle-chart {
+  width: 180px;
+  height: 180px;
+}
+
+.circle-background {
+  stroke: #efefef;
+  stroke-width: 10;
+  fill: none;
+}
+
+.circle-graph {
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.graph-text {
+  font-size: 2.8em;
+  text-anchor: middle;
+  alignment-baseline: central;
+}
+
+.graph-text.type {
+  font-size: 1em;
+}
+
+.circle-graph.one {
+  stroke-dasharray: 450,534;
+  stroke: #00acc1;
+}
+
+.circle-graph.two {
+  stroke-dasharray: 200,534;
+  stroke: #13A4FA;
+}
+
+.circle-graph.three {
+  stroke-dasharray: 100,534;
+  stroke: #9D70AC;
+}
+
+.graph-container .circle-graph-totals {
+  flex: none;
+  display: block;
+}
+
+.bar-graph {
+  grid-area: bar-graph;
+}
+
+.day-graph {
+  display: block;
+  margin: auto;
+}
+
+.circle-data {
+  grid-area: circle-data;
+}
+
+.bar-data {
+  grid-area: bar-data;
+}
+
+.data-button {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.graph-info {
+  border-radius: 50px;
+  font-size: 1em;
+  height: 2em;
+  padding: 0px 10px 0px 10px;
+  border: 2px solid lightgrey;
+  color: #989CA6;
+}
+
+.line-arrow {
+  grid-area: line-arrow;
+  text-align: center;
+  padding: 30px 0px 0px 0px;
+}
+
+.line-arrow:before,
+.line-arrow:after {
+  content: "";
+  display: inline-block;
+  width: 45%;
+  margin: 0px auto;
+  border: 2px solid #D7DBDE;
+}
+
+.arrow {
+  border-radius: 100% 100%;
+  padding: 5px 8px;
+}
+
+.fas.fa-chevron-up {
+  color: #989CA6;
+}
+
+.job-description {
+  grid-area: summary;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 0px 30px 0px 30px;
+}
+
+.table-title {
+  margin: 0px -30px 0px -30px;
+  padding: 15px 30px 15px 30px;
+  border-bottom: none;
   color: white;
   background-color: #6F7E95;
-  /*grid-column: 1 / span 2;*/
+  width: 100%;
 }
-.table {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat (8, auto);
-  grid-gap: 15px 0px;
-  background-color: white;
-  margin: 30px;
-  margin-top: 0px;
-  font-size: .70em;
-  padding: 20px 20px 0px 20px;
+
+.job-description p,
+.column-one {
+  margin: 30px 0px 0px 0px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.column-one {
+  width: 20%;
+}
+
+.job-description p {
+  width: 80%;
+}
+
+.edit {
+  background-color: #8d97ad;
+  height: 2.5em;
+  border: 0px;
+  color: white;
 }
 
 .hiring-person{
@@ -305,61 +479,44 @@ header p {
   width: 25px;
   position: absolute;
   left: 10px;
-  top: -7px;
+  top: -5px;
 }
 
-.table h6, .table p {
-  margin: 0px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.table p.hiring-img {
+p.hiring-img {
   position: relative;
-  padding-left: 40px;
+  width: 74%;
+  padding-left: 6%;
 }
 
-.table p {
-  padding-left: 10px;
-}
-
-.table-head {
-  margin: 30px 30px 0px 30px;
-  padding-top: 20px;
-  border-bottom: none;
-}
-.table-head h6 {
-  border-bottom: none;
-  padding-left: 20px;
-  margin: 0px;
-  padding-bottom: 20px;
-}
-
-.table .last {
+p.last,
+.column-one.last {
   border-bottom: none;
 }
 
-footer {
+footer, footer div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 30px 30px 30px 0px;
+  justify-content: space-between;
 }
 
-footer button {
+footer div {
+  height: 33%;
+}
+
+footer div button {
   border-radius: 5px;
 }
 
-footer h4, footer p{
+footer div h4, footer div p{
   margin: 0px;
 }
 
-footer p {
-  font-size: .65em;
+footer div p {
+  font-size: .85em;
   margin: 10px 0px 10px 0px;
 }
 
-footer h4 {
+footer div h4 {
   padding-top: 20px;
   border-top: 2px solid lightgrey;
 }
@@ -374,6 +531,7 @@ footer h4 {
   height: 35px;
   margin-bottom: 10px;
   border: none;
+  font-size: .80em;
   color: white;
 }
 
@@ -414,5 +572,163 @@ footer h4 {
   border: 0px;
 }
 
+@media screen and (max-width: 1300px) {
+.summary {
+  grid-gap: 30px 0px;
+  grid-template-columns: auto;
+  grid-template-areas: 
+    "data data"
+    "summary summary"
+    "social social"
+}
 
+.data-display {
+  grid-area: data;
+  display: grid;
+  grid-template-areas:
+    "circle-graph circle-graph"
+    "circle-data circle-data"
+    "bar-graph bar-graph"
+    "bar-data bar-data"
+    "line-arrow line-arrow"
+}
 
+.bar-graph {
+  margin-top: 50px;
+}
+
+.graph-container {
+  justify-content: space-around;
+}
+
+footer {
+  grid-area: social;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer div {
+  width: 30%;
+}
+
+footer div h4 {
+  border: none;
+}
+.social-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-buttons button {
+  width: 30%;
+}
+}
+
+@media screen and (max-width: 900px) {
+header {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hamburger search social video nine"
+    "title title title title title"
+    "button button button button button"
+    "nav-list nav-list nav-list nav-list nav-list";
+}
+
+.button-corral {
+  grid-area: button;
+  position: initial;
+  width: 100%;
+}
+
+.button.open {
+  margin-left: 30px;
+}
+
+.nav-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-line p {
+  font-size: .70em;
+  margin: 15px 0px 0px 0px;
+  padding-bottom: 5px;
+}
+
+.graph-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+p.hiring-img {
+  position: relative;
+  width: 61%;
+  padding-left: 9%;
+}
+}
+
+@media screen and (max-width: 700px) {
+.page-container {
+  grid-template-columns: auto;
+  grid-template-areas:
+    "navbar navbar"
+    "header header"
+    "summary summary"
+}
+
+.user-pic {
+  width: 100%;
+}
+
+nav {
+  padding: 15px 15px 0px 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer {
+  grid-area: social;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer div {
+  width: 100%;
+}
+
+footer div h4 {
+  border-top: 2px solid lightgrey; 
+}
+.social-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-buttons button {
+  width: 100%;
+}
+
+.line-arrow:before,
+.line-arrow:after {
+  width: 42%;
+}
+
+.column-one {
+  width: 30%;
+}
+
+.job-description p {
+  width: 70%;
+}
+
+p.hiring-img {
+  position: relative;
+  width: 61%;
+  padding-left: 9%;
+}
+
+}
