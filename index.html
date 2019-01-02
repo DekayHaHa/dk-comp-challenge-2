@@ -11,7 +11,7 @@
     <nav>
       <section class="user-pic">
         <img class="profile-pic" src="static-comp-image.jpg" alt="user-pic">
-        <h4 class="user-name">Dismal Devin <i class="user-drop-down"></i></h4>
+        <h4 class="user-name">Dismal Devin <i class="fas fa-chevron-down"></i></i></h4>
       </section>
       <section class="main">
         <h4>Main</h4>
@@ -44,26 +44,26 @@
       </section>
     </nav>
     <header>
-        <section class="nav-button icon">
-        </section>
-        <section class="search-field">
-          <input type="text" name="site-search" value="search for a job, task or resume"></ins>
-        </section>
-        <section class="add-button icon">
-        </section>
-        <section class="video icon">
-        </section>
-        <section class="page-display icon">
-        </section>
+      <section class="nav-button icon"><div><i class="fas fa-caret-left">&nbsp;</i><i class="fas fa-bars"> </i></div>
+      </section>
+      <section class="search-field">
+        <input type="text" name="site-search" value="search for a job, task or resume"></ins>
+      </section>
+      <section class="add-button icon"><i class="fas fa-user-plus"></i>
+      </section>
+      <section class="video icon"><i class="fas fa-calendar-plus"></i>
+      </section>
+      <section class="page-display icon"><i class="fas fa-th"></i>
+      </section>
       <section class="title-container">
-      <h2 class="tile">Customer Service Representative</h2>
-      <h5 class="sub title"><i class="fas fa-map-marker-alt"></i> San Francisco, CA ·<span> Preview this post</span></h5>
+        <h2 class="tile">Customer Service Representative</h2>
+        <h5 class="sub title"><i class="fas fa-map-marker-alt"></i> San Francisco, CA <i class="fas fa-circle"></i><span> Preview this post</span></h5>
       </section>
       <div class="button-corral">
-        <button class="button open">OPEN</button>
-        <button class="button banner"></button>
-        <button class="button write"></button>
-        <button class="button light"></button>
+        <button class="button open"><i class="fas fa-circle"></i> OPEN</button>
+        <button class="button bookmark"><i class="fas fa-bookmark"></i></button>
+        <button class="button write"><i class="fas fa-pen-alt"></i></button>
+        <button class="button light"><i class="fas fa-book-open"></i></button>
       </div>
       <div class="nav-line">
         <p>SUMMARY</p>
@@ -73,55 +73,94 @@
         <p>ACTIVITY</p>
         <p>BROADCAST</p>
         <p>NOTIFICATIONS</p>
-        </div>
+      </div>
     </header>
     <article class="summary">
       <section class="data-display">
-        <h1>DATA</h1>
+        <div class="graph-container">
+          <svg class="circle-chart" viewbox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-background" cx="90" cy="90" r="85" />
+            <circle class="circle-graph one" cx="90" cy="90" r="85" />
+            <g class="graph-one-info">
+              <text class="graph-text one value" x="50%" y="42%">3,100</text>
+              <text class="graph-text one type" x="50%" y="60%">APPLICANTS</text>
+            </g>
+          </svg>
+          <svg class="circle-chart" viewbox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-background" cx="90" cy="90" r="85" />
+            <circle class="circle-graph two" cx="90" cy="90" r="85" />
+            <g class="graph-two-info">
+              <text class="graph-text two value" x="50%" y="42%">1,500</text>
+              <text class="graph-text two type" x="50%" y="60%">INTERVIEWS</text>
+            </g>
+          </svg>
+          <svg class="circle-chart" viewbox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-background" cx="90" cy="90" r="85" />
+            <circle class="circle-graph three" cx="90" cy="90" r="85" />
+            <g class="graph-three-info">
+              <text class="graph-text three value" x="50%" y="42%">900</text>
+              <text class="graph-text three type" x="50%" y="58%">FORWARDS</text>
+            </g>
+          </svg>
+        </div>
+          <div class="bar-graph">
+            <img class="day-graph" src="image.png">
+          </div>
+          <div class="circle-data data-button">
+          <button class="circle graph-info">TOTALS <i class="fas fa-circle"></i> Out of 5,500 views</button>
+        </div>
+        <div class="bar-data data-button">
+          <button class="bar graph-info">APPLICANTS/DAY</button>
+        </div>
+        <div class="line-arrow">
+          <button class="arrow"><i class="fas fa-chevron-up"></i></button>
+        </div>
       </section>
       <section class="job-description">
-          <div class="table-head">
-            <h6>JOB DESCRIPTION <button class="edit"></button></h6>
-          </div>
-        <div class="table">
-              <h6>POSITION TITLE</h6>
-              <p>Customer Service Representative</p>
-              <h6>LOCATION</h6>
-              <p>San Francisco, CA</p>
-              <h6>EMPLOYMENT TYPE</h6>
-              <p>Full-time</p>
-              <h6>EXPERIECE</h6>
-              <p>Mid-level</p>
-              <h6>STATUS</h6>
-              <p>Open</p>
-              <h6>DESCRIPTION</h6>
-              <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nod exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h6>HIRING LEAD</h6>
-              <p class="hiring-img"><img class="hiring-person" src="static-comp-image.jpg"> Devin kapla</p>
-              <h6 class="last">APPROVED SALARY</h6>
-              <p class="last">$100,000</p>
-        </div>
+          <h5 class="table-title">JOB DESCRIPTION <button class="edit"><i class="fas fa-pen-alt"></i> EDIT</button></h5>
+          <h5 class="column-one">POSITION TITLE</h5>
+          <p>Customer Service Representative</p>
+          <h5 class="column-one">LOCATION</h5>
+          <p>San Francisco, CA</p>
+          <h5 class="column-one">EMPLOYMENT TYPE</h5>
+          <p>Full-time</p>
+          <h5 class="column-one">EXPERIECE</h5>
+          <p>Mid-level</p>
+          <h5 class="column-one">STATUS</h5>
+          <p>Open</p>
+          <h5 class="column-one">DESCRIPTION</h5>
+          <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nod exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h5 class="column-one">HIRING LEAD</h5>
+          <p class="hiring-img"><img class="hiring-person" src="static-comp-image.jpg">Devin kapla</p>
+          <h5 class="column-one last">APPROVED SALARY</h5>
+          <p class="last">$100,000</p>
       </section>
       <footer>
         <div class="social-buttons">
-        <button class="facebook"><i class="fab fa-facebook-f"></i> Post to Facebook</button>
-        <button class="tweet"><i class="fab fa-twitter"></i> Tweet this Job</button>
-        <button class="linkedin"><i class="fab fa-linkedin"></i> Post to Linkedin</button>
+          <button class="facebook"><i class="fab fa-facebook-f"></i> Post to Facebook</button>
+          <button class="tweet"><i class="fab fa-twitter"></i> Tweet this Job</button>
+          <button class="linkedin"><i class="fab fa-linkedin"></i> Post to Linkedin</button>
         </div>
+        <div>
         <h4 class="job-link"><i class="fas fa-globe-americas"></i> Link to this Job</h4>
         <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
         <button class="copy"><input class="input-copy" type="text" name="">Copy</button>
+        </div>
+        <div>
         <h4><i class="fas fa-camera-retro"></i> Use the Button Widget</h4>
         <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
         <button class="copy"><input class="input-copy" type="text" name="">Copy</button>
+        </div>
+        <div>
         <h4><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h4>
         <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreua.</p>
         <input type="" name="" value="devinkapla@gmail.com">
+      </div>
       </footer>
     </article>
   </section>
