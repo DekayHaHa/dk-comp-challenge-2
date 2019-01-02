@@ -9,24 +9,24 @@ body{
   grid-template-columns: 170px; auto;
   grid-template-rows: auto;
   grid-template-areas:
-    "navbar header"
-    "navbar summary"
-    "navbar summary"
+  "navbar header"
+  "navbar summary"
+  "navbar summary"
 }
 
 nav {
   background-color: #354051;
   color: #ABB6C8;
-  grid-area: navbar;
   display: flex;
   flex-direction: column;
   font-size: .75em;
+  grid-area: navbar;
 }
 
 .user-pic {
-  text-align: center;
-  margin-top: 30px;
   border-bottom: 2px solid #2D384B;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .user-name:after {
@@ -48,8 +48,8 @@ ul {
 }
 
 li {
-  list-style: none;
   color: #ABB6C8;
+  list-style: none;
   padding: 10px 0px 10px 15px;
 }
 
@@ -67,13 +67,13 @@ li {
 }
 
 nav li:before {
-  content: '';
-  display: inline-block;
-  margin-right: 10px;
-  height: 15px;
-  width: 15px;
   background-position: center;
   background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 15px;
+  margin-right: 10px;
+  width: 15px;
 }
 
 .home:before {
@@ -142,15 +142,15 @@ a {
 }
 
 header {
-  position: relative;
-  grid-area: header;
   display: grid;
-  grid-template-columns: .5fr 4fr .5fr .5fr .5fr;
-  grid-template-rows: .50fr 1fr .40fr;
+  grid-area: header;
   grid-template-areas:
     "hamburger search social video nine"
     "title title title title title"
     "nav-list nav-list nav-list nav-list nav-list";
+  grid-template-columns: .5fr 4fr .5fr .5fr .5fr;
+  grid-template-rows: .50fr 1fr .40fr;
+  position: relative;
 }
 
 
@@ -160,16 +160,16 @@ header {
 }
 
 .icon:hover {
-  background-color: #13A4FA;
   color: white;
+  background-color: #13A4FA;
 }
 
 .icon {
-  display: flex;
-  justify-content: space-around;
-  border-right: 2px solid lightgrey;
   align-items: center;
+  border-right: 2px solid lightgrey;
+  display: flex;
   font-size: 2.5em;
+  justify-content: space-around;
 }
 
 .nav-button {
@@ -181,25 +181,25 @@ header {
 }
 
 header input {
-  width: 90%;
-  height: 100%;
-  border: none;
-  margin-left: 10px
   border-bottom: 2px solid lightgrey;
+  border: none;
+  height: 100%;
+  margin-left: 10px
+  width: 90%;
 }
 
 header input[type='text'] {
-  background: url('images/search-solid.svg') no-repeat;
-  background-size: 25% 25%;
-  padding-left: 6%;
   background-position: -12% 50%;
+  background-size: 25% 25%;
+  background: url('images/search-solid.svg') no-repeat;
   color: #ABB6C8;
   font-size: 1em;
+  padding-left: 6%;
 }
 
 .add-button {
-  grid-area: social;
   border-left: 2px solid lightgrey;
+  grid-area: social;
 }
 
 .video {
@@ -211,10 +211,10 @@ header input[type='text'] {
 }
 
 .title-container {
-  padding-top: 3%;
-  padding-left: 5%; 
   border-top: 2px solid lightgrey;
   grid-area: title;
+  padding-left: 5%; 
+  padding-top: 3%;
 }
 
 
@@ -238,25 +238,25 @@ h5 span {
 }
 
 .button-corral {
-  width: 300px;
-  position: absolute;
   grid-area: buttons;
+  position: absolute;
   right: 50px;
   top: 175px;
+  width: 300px;
 }
 
 
 .button {
-  margin-right: 5%;
   border-radius: 100% 100%;
-  padding: 10px;
   border: 2px solid lightgrey;
   color: #989CA6;
+  margin-right: 5%;
+  padding: 10px;
 }
 
 .button.open {
-  margin-left: -10%;
   border-radius: 50px 50px;
+  margin-left: -10%;
 }
 
 .button.bookmark {
@@ -264,19 +264,17 @@ h5 span {
 }
 
 .nav-line {
-  grid-area: nav-list;
-  display: flex;
   align-items: flex-end;
+  display: flex;
+  grid-area: nav-list;
 }
 
 .nav-line p {
   font-size: .80em;
-  margin-left: 3.5%;
   margin-bottom: 0%;
+  margin-left: 3.5%;
   padding-bottom: 10px;
 }
-
-
 
 header p:hover {
   border-bottom: 2px solid #13A4FA;
@@ -288,25 +286,25 @@ header p {
 
 
 .summary {
+  background-color: #EDF2F6;
+  display: grid;
+  grid-area: summary;
   grid-column-gap: 3%;
   grid-row-gap: 6%;
-  padding: 3% 6% 6% 3%;
-  background-color: #EDF2F6;
-  grid-area: summary;
-  display: grid;
-  grid-template-columns: 65% 35%;
-  grid-template-rows: auto;
   grid-template-areas:
     "data data"
     "summary social"
+  grid-template-columns: 65% 35%;
+  grid-template-rows: auto;
+  padding: 3% 6% 6% 3%;
 }
 
 .data-display {
-  grid-area: data;
   display: grid;
+  grid-area: data;
   grid-template-areas:
-    "circle-graph bar-graph"
     "circle-data bar-data"
+    "circle-graph bar-graph"
     "line-arrow line-arrow"
 }
 
@@ -315,16 +313,15 @@ header p {
   grid-area: social;
 }
 .graph-container {
-  grid-area: circle-graph;
   display: flex;
+  grid-area: circle-graph;
   justify-content: space-between;
-  /*flex-wrap: wrap;*/
 }
 
 .circle-graph {
   animation: circle-chart-fill 2s reverse;
-  transform:  rotate(90deg);
   transform-origin: center;
+  transform:  rotate(90deg);
 }
 
 @keyframes circle-chart-fill {
@@ -332,26 +329,26 @@ header p {
 }
 
 .circle-chart {
-  width: 180px;
   height: 180px;
+  width: 180px;
 }
 
 .circle-background {
-  stroke: #efefef;
-  stroke-width: 10;
   fill: none;
+  stroke-width: 10;
+  stroke: #efefef;
 }
 
 .circle-graph {
-  stroke-width: 10;
-  stroke-linecap: round;
   fill: none;
+  stroke-linecap: round;
+  stroke-width: 10;
 }
 
 .graph-text {
+  alignment-baseline: central;
   font-size: 2.8em;
   text-anchor: middle;
-  alignment-baseline: central;
 }
 
 .graph-text.type {
@@ -374,8 +371,8 @@ header p {
 }
 
 .graph-container .circle-graph-totals {
-  flex: none;
   display: block;
+  flex: none;
 }
 
 .bar-graph {
@@ -396,33 +393,33 @@ header p {
 }
 
 .data-button {
-  padding-top: 15px;
   display: flex;
   justify-content: center;
+  padding-top: 15px;
 }
 
 .graph-info {
   border-radius: 50px;
+  border: 2px solid lightgrey;
+  color: #989CA6;
   font-size: 1em;
   height: 2em;
   padding: 0px 10px 0px 10px;
-  border: 2px solid lightgrey;
-  color: #989CA6;
 }
 
 .line-arrow {
   grid-area: line-arrow;
-  text-align: center;
   padding: 30px 0px 0px 0px;
+  text-align: center;
 }
 
 .line-arrow:before,
 .line-arrow:after {
+  border: 2px solid #D7DBDE;
   content: "";
   display: inline-block;
-  width: 45%;
   margin: 0px auto;
-  border: 2px solid #D7DBDE;
+  width: 45%;
 }
 
 .arrow {
@@ -435,27 +432,27 @@ header p {
 }
 
 .job-description {
-  grid-area: summary;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
+  grid-area: summary;
   padding: 0px 30px 0px 30px;
 }
 
 .table-title {
-  margin: 0px -30px 0px -30px;
-  padding: 15px 30px 15px 30px;
+  background-color: #6F7E95;
   border-bottom: none;
   color: white;
-  background-color: #6F7E95;
+  margin: 0px -30px 0px -30px;
+  padding: 15px 30px 15px 30px;
   width: 100%;
 }
 
 .job-description p,
 .column-one {
+  border-bottom: 2px solid lightgrey;
   margin: 30px 0px 0px 0px;
   padding-bottom: 30px;
-  border-bottom: 2px solid lightgrey;
 }
 
 .column-one {
@@ -468,24 +465,24 @@ header p {
 
 .edit {
   background-color: #8d97ad;
-  height: 2.5em;
   border: 0px;
   color: white;
+  height: 2.5em;
 }
 
 .hiring-person{
   border-radius: 100% 100%;
   height: 25px;
-  width: 25px;
-  position: absolute;
   left: 10px;
+  position: absolute;
   top: -5px;
+  width: 25px;
 }
 
 p.hiring-img {
+  padding-left: 6%;
   position: relative;
   width: 74%;
-  padding-left: 6%;
 }
 
 p.last,
@@ -517,8 +514,8 @@ footer div p {
 }
 
 footer div h4 {
-  padding-top: 20px;
   border-top: 2px solid lightgrey;
+  padding-top: 20px;
 }
 
 .job-link {
@@ -526,18 +523,18 @@ footer div h4 {
 }
 
 .social-buttons button {
-  position: relative;
-  width: 100%;
+  border: none;
+  color: white;
+  font-size: .80em;
   height: 35px;
   margin-bottom: 10px;
-  border: none;
-  font-size: .80em;
-  color: white;
+  position: relative;
+  width: 100%;
 }
 
 .social-buttons i {
-  position: absolute;
   left: 10px;
+  position: absolute;
 }
 
 .facebook {
@@ -554,181 +551,181 @@ footer div h4 {
 
 .copy {
   align-items: center;
-  height: 30px;
-  margin-bottom: 20px;
-  padding: 0px;
-  display: flex;
-  justify-content: space-between;
-  border: none;
   background-color: #46B8C2;
+  border: none;
   color: white;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
   padding-right: 5px;
-
+  padding: 0px;
 }
 
 .input-copy {
+  border: 0px;
   height: 30px;
   width: 80%;
-  border: 0px;
 }
 
 @media screen and (max-width: 1300px) {
-.summary {
-  grid-gap: 30px 0px;
-  grid-template-columns: auto;
-  grid-template-areas: 
+  .summary {
+    grid-gap: 30px 0px;
+    grid-template-columns: auto;
+    grid-template-areas: 
     "data data"
     "summary summary"
     "social social"
-}
+  }
 
-.data-display {
-  grid-area: data;
-  display: grid;
-  grid-template-areas:
+  .data-display {
+    display: grid;
+    grid-area: data;
+    grid-template-areas:
     "circle-graph circle-graph"
     "circle-data circle-data"
     "bar-graph bar-graph"
     "bar-data bar-data"
     "line-arrow line-arrow"
-}
+  }
 
-.bar-graph {
-  margin-top: 50px;
-}
+  .bar-graph {
+    margin-top: 50px;
+  }
 
-.graph-container {
-  justify-content: space-around;
-}
+  .graph-container {
+    justify-content: space-around;
+  }
 
-footer {
-  grid-area: social;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-footer div {
-  width: 30%;
-}
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: social;
+  }
+  footer div {
+    width: 30%;
+  }
 
-footer div h4 {
-  border: none;
-}
-.social-buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  footer div h4 {
+    border: none;
+  }
+  .social-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-.social-buttons button {
-  width: 30%;
-}
+  .social-buttons button {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 900px) {
-header {
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas:
+  header {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
     "hamburger search social video nine"
     "title title title title title"
     "button button button button button"
     "nav-list nav-list nav-list nav-list nav-list";
-}
+  }
 
-.button-corral {
-  grid-area: button;
-  position: initial;
-  width: 100%;
-}
+  .button-corral {
+    grid-area: button;
+    position: initial;
+    width: 100%;
+  }
 
-.button.open {
-  margin-left: 30px;
-}
+  .button.open {
+    margin-left: 30px;
+  }
 
-.nav-line {
-  display: flex;
-  justify-content: space-between;
-}
+  .nav-line {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.nav-line p {
-  font-size: .70em;
-  margin: 15px 0px 0px 0px;
-  padding-bottom: 5px;
-}
+  .nav-line p {
+    font-size: .70em;
+    margin: 15px 0px 0px 0px;
+    padding-bottom: 5px;
+  }
 
-.graph-container {
-  flex-direction: column;
-  align-items: center;
-}
+  .graph-container {
+    align-items: center;
+    flex-direction: column;
+  }
 
-p.hiring-img {
-  position: relative;
-  width: 61%;
-  padding-left: 9%;
-}
+  p.hiring-img {
+    padding-left: 9%;
+    position: relative;
+    width: 61%;
+  }
 }
 
 @media screen and (max-width: 700px) {
-.page-container {
-  grid-template-columns: auto;
-  grid-template-areas:
+  .page-container {
+    grid-template-columns: auto;
+    grid-template-areas:
     "navbar navbar"
     "header header"
     "summary summary"
-}
+  }
 
-.user-pic {
-  width: 100%;
-}
+  .user-pic {
+    width: 100%;
+  }
 
-nav {
-  padding: 15px 15px 0px 15px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 15px 0px 15px;
+  }
 
-footer {
-  grid-area: social;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-footer div {
-  width: 100%;
-}
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: social;
+  }
 
-footer div h4 {
-  border-top: 2px solid lightgrey; 
-}
-.social-buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  footer div {
+    width: 100%;
+  }
 
-.social-buttons button {
-  width: 100%;
-}
+  footer div h4 {
+    border-top: 2px solid lightgrey; 
+  }
 
-.line-arrow:before,
-.line-arrow:after {
-  width: 42%;
-}
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-.column-one {
-  width: 30%;
-}
+  .social-buttons button {
+    width: 100%;
+  }
 
-.job-description p {
-  width: 70%;
-}
+  .line-arrow:before,
+  .line-arrow:after {
+    width: 42%;
+  }
 
-p.hiring-img {
-  position: relative;
-  width: 61%;
-  padding-left: 9%;
-}
+  .column-one {
+    width: 30%;
+  }
 
+  .job-description p {
+    width: 70%;
+  }
+
+  p.hiring-img {
+    padding-left: 9%;
+    position: relative;
+    width: 61%;
+  }
 }
